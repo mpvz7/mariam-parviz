@@ -7,13 +7,19 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="../assets/css/main.css" />
 	</head>
 	<body>
 
-		<?php 
-			include("header.php");
-		?>
+    <header id="header">
+        <strong><a class="logo" href="index.html">Mariam Parviz</a></strong>
+        <nav>
+            <a class="links" href="pro.html">Expériences</a>
+            <a class="links" href="etudes.html">Etudes</a>
+            <a class="links" href="projets.html">Projets</a>
+            <a class="links" href="#">Contact</a>
+        </nav>
+    </header>
 		
 		<!-- Heading -->
 			<div id="heading" >
@@ -31,7 +37,7 @@
                                                 <section>
 							<div class="content">
 								<header>
-									<p><img alt="logo-iut" src="./images/logo-IMT.png"/></p>
+									<p><img alt="logo-iut" src="../assets/images/logo-IMT.png"/></p>
 									<h3>Formation Ingénieurie Logicielle</h3>
 									<time>Septembre 2021 - Aout 2024</time>
 								</header>
@@ -41,7 +47,7 @@
 						<section>
 							<div class="content">
 								<header>
-									<p><img alt="logo-iut" src="./images/logo-iut.png"/></p>
+									<p><img alt="logo-iut" src="../assets/images/logo-iut.png"/></p>
 									<h3>DUT Informatique</h3>
 									<time>Septembre 2020 - Aout 2021</time>
 								</header>
@@ -51,7 +57,7 @@
 						<section>
 							<div class="content">
 								<header>
-									<p><img alt="logo-poitiers" src="./images/logo-poitiers.png"/></p>
+									<p><img alt="logo-poitiers" src="../assets/images/logo-poitiers.png"/></p>
 									<h3>Master 1 MEEF : Mathématiques</h3>
 									<time>Septembre 2019 - Juillet 2020</time>
 								</header>
@@ -62,7 +68,7 @@
 						<section>
 							<div class="content">
 								<header>
-									<p><img alt="logo-poitiers" src="./images/logo-poitiers.png"/></p>
+									<p><img alt="logo-poitiers" src="../assets/images/logo-poitiers.png"/></p>
 									<h3>Licence mathématiques générales</h3>
 									<time>Janvier 2017 - Juillet 2019</time>
 								</header>
@@ -72,7 +78,7 @@
 						<section>
 							<div class="content">
 								<header>
-									<p><img alt="logo-poitiers" src="./images/logo-poitiers.png"/></p>
+									<p><img alt="logo-poitiers" src="../assets/images/logo-poitiers.png"/></p>
 									<h3>PACES</h3>
 									<time>Septembre 2015 - Decembre 2016</time>
 								</header>
@@ -93,48 +99,46 @@
 				</div>
 			</section>
 
-        <footer id="footer">
-            <div class="inner">
-                <div class="content">
-                    <div class="aboutMe">
-                        <h4>En savoir plus</h4>
-                        <p>Ce site WEB professionnelle a été fait en dehors du cadre educatif. Le site est en constante évolution dès la maîtrise de
-                            nouvelles technologies. Bien qu'il ne soit pas représentatif de mes compétences, il représente un aperçu de ma motivation.
-                        </p>
-                    </div>
-                    <div class="contactMe">
-                        <h4>Contact</h4>
-                        <ul class="plain">
-                            <li><a href="mailto:parvizmariam@gmail.com"><i class="fa fa-envelope">&nbsp;</i>Mail</a></li>
-                            <li><a href="https://www.linkedin.com/in/mariam-parviz-b86660201" target="_blank"><i class="fa fa-linkedin">&nbsp;</i>Linkedin</a></li>
-                            <li><a href="https://github.com/mpvz7" target="_blank"><i class="fa fa-github">&nbsp;</i>Github</a></li>
-                        </ul>
-                    </div>
-                    <div class="form">
-                        <h4>Form</h4>
-                        <form>
-                            <div class="formText">
-                                <input id="contactNameInpt" type="text">
-                                <input id="contactMailInpt" type="text">
-                                <input id="contactProjectInpt" type="text">
-                                Hello,
-                                <br/>
-                                <br/>
-                                Je suis
-                                <div class="cFormInput" id="contactNameEdit" data-target="contactNameInpt" contenteditable="true">votre nom</div>
-                                , mon adresse mail est
-                                <div class="cFormInput" id="contactMailEdit" data-target="contactMailInpt" contenteditable="true">votre mail</div>
-                                et j'aimerais discuter
-                                <div class="cFormInput" id="contactProjectEdit" data-target="contactProjectInpt" contenteditable="true">à propos de</div>.
-                            </div>
-                            <button class="gradButton" type="submit">Envoyer</button>
-                        </form>
-                    </div>
-                </div>
-                <div class="copyright">
-                    &copy; Mariam Parviz
-                </div>
+    <footer id="footer">
+        <div class="content">
+            <div class="aboutMe">
+                <h4>En savoir plus</h4>
+                <p>Ce site WEB professionnelle a été fait en dehors du cadre educatif. Le site est en constante évolution dès la maîtrise de
+                    nouvelles technologies. Bien qu'il ne soit pas représentatif de mes compétences, il représente un aperçu de ma motivation.
+                </p>
             </div>
-        </footer>
+            <div class="contactMe">
+                <h4>Contact</h4>
+                <ul class="plain">
+                    <li><a href="mailto:parvizmariam@gmail.com"><i class="fa fa-envelope">&nbsp;</i>Mail</a></li>
+                    <li><a href="https://www.linkedin.com/in/mariam-parviz-b86660201" target="_blank"><i class="fa fa-linkedin">&nbsp;</i>Linkedin</a></li>
+                    <li><a href="https://github.com/mpvz7" target="_blank"><i class="fa fa-github">&nbsp;</i>Github</a></li>
+                </ul>
+            </div>
+            <div class="form">
+                <h4>Form</h4>
+                <form>
+                    <div class="formText">
+                        <input id="contactNameInpt" type="text">
+                        <input id="contactMailInpt" type="text">
+                        <input id="contactProjectInpt" type="text">
+                        Hello,
+                        <br/>
+                        <br/>
+                        Je suis
+                        <div class="cFormInput" id="contactNameEdit" data-target="contactNameInpt" contenteditable="true">votre nom</div>
+                        , mon adresse mail est
+                        <div class="cFormInput" id="contactMailEdit" data-target="contactMailInpt" contenteditable="true">votre mail</div>
+                        et j'aimerais discuter
+                        <div class="cFormInput" id="contactProjectEdit" data-target="contactProjectInpt" contenteditable="true">à propos de</div>.
+                    </div>
+                    <button class="gradButton" type="submit">Envoyer</button>
+                </form>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; Mariam Parviz
+        </div>
+    </footer>
 	</body>
 </html>				

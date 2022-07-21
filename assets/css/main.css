@@ -12,7 +12,9 @@
 /* Basic */
 body {
   -ms-overflow-style: scrollbar;
-  position: relative;}
+  position: relative;
+  scroll-snap-type: none;
+}
   
 @media screen and (max-width: 480px) {
 html, body {
