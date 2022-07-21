@@ -1,0 +1,140 @@
+/* Variables */
+:root {
+    --main-pink-color: #ffa69e;
+    --main-purple-color: #5d4954;
+    --main-grey-color: #434343;
+}
+
+.holster {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: column nowrap;
+}
+.holster .container {
+    display: flex;
+    flex-flow: column nowrap;
+    overflow: auto;
+    height: 95vh;
+    width: 100vw;
+    object-fit: cover;
+    right: 0;
+    bottom: 0;
+    /* scroll-snap */
+    scroll-snap-type: y mandatory;
+}
+
+.holster .container > * {
+    text-align: center;
+    scroll-snap-align: center;
+    flex: none;
+    height: 100vh;
+    overflow:auto;
+}
+
+/* appearance fixes */
+/* coloration */
+.holster .container > section:nth-child(odd) {
+    background: linear-gradient(315deg, var(--main-pink-color) 0%, var(--main-purple-color) 74%);
+    z-index: 1;
+}
+
+.holster .container > section:nth-child(even) {
+    background-color: #000000;
+    background-image: linear-gradient(147deg, #000000 0%, var(--main-grey-color) 74%);
+    z-index: 1;
+}
+.holster .container > section:first-child {
+    background-color: var(--main-purple-color);
+    z-index: 1;
+}
+
+/* Footer */
+#footer{
+    background-color: #000000;
+    background-image: linear-gradient(147deg, #000000 0%, #434343 74%);
+    color: white;
+}
+
+#footer h4 {
+    font-size: 1.4em;
+    padding: 1em 0;
+}
+#footer a{
+    text-decoration: none;
+    color: white;
+}
+#footer i{
+    font-size: 1.5em;
+    padding-right: 1em;
+    color: #ffa69e;
+}
+
+#footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#footer li{
+    padding-bottom: 1em;
+}
+
+#footer .content{
+    display: flex;
+    justify-content: space-around;
+    text-align: justify;
+}
+
+.aboutMe, .form{
+    padding: 10% 0;
+    width: 30%;
+}
+.contactMe{
+    padding-top: 10%;
+    width: 20%;
+}
+
+.cFormInput {
+    outline: 0;
+    color: #ffa69e;
+    padding: 1em 1em;
+    background: transparent;
+    transition: border-color 0.2s;
+    overflow-wrap: break-word;
+}
+
+.cFormInput:focus{
+    content: none;
+}
+
+.form input {
+    visibility: hidden;
+    position: absolute;
+    overflow-wrap: break-word;
+    bottom: 0;
+}
+.formText{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: last baseline;
+    overflow-wrap: break-word;
+}
+
+.form button{
+    background: no-repeat center, linear-gradient(315deg, #ffa69e 0%, #5d4954 74%);
+    cursor: pointer;
+    outline: none;
+    display: block;
+    margin-top: 40px;
+    border-radius: 20px;
+    border: 0;
+    box-shadow: none;
+    width: 100px;
+    height: 35px;
+    font-size: 12px;
+    line-height: 35px;
+    text-align: center;
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+}
