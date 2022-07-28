@@ -3,12 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="5c5a4438-4629-4ec0-a785-4d7850c6431d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/etudes.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/formation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pro.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/emploi.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/projets.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/projet.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CV-Mariam-Parviz.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CV-Privilegie-Parviz.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/emploi.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/emploi.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/formation.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/formation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/projet.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/projet.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +56,7 @@
       <workItem from="1658419977464" duration="6734000" />
       <workItem from="1658433556346" duration="47000" />
       <workItem from="1658433618438" duration="1007000" />
-      <workItem from="1659024263237" duration="1387000" />
+      <workItem from="1659024263237" duration="1843000" />
     </task>
     <servers />
   </component>
