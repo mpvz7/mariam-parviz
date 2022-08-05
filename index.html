@@ -10,6 +10,7 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/index.css" />
 		<link rel="stylesheet" href="pingouin/style_pingouin.css" />
+		<link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
 	</head>
     <body class="holster">
         <header id="header">
@@ -105,30 +106,14 @@
         <!-- Jeu pingouin -->
             <section class="wrapper">
                 <div class="inner">
-                    <header class="special">
-                        <h2>Pingouin</h2>
-                        <div class="score-container">
-                            <div id="bestScore"></div>
-                            <div id="currentScore"></div>
-                        </div>
-                    </header>
-
-                    <!--<?php
-
-                        $ua = $_SERVER['HTTP_USER_AGENT'];
-                        if (preg_match('/iphone/i',$ua) ||
-                            preg_match('/android/i',$ua) ||
-                            preg_match('/blackberry/i',$ua) ||
-                            preg_match('/symb/i',$ua) ||
-                            preg_match('/ipad/i',$ua) ||
-                            preg_match('/ipod/i',$ua) ||
-                            preg_match('/phone/i',$ua) ){
-
-                            echo '<canvas id="canvas" width="400" height="200"></canvas>';
-                       }else {
-                            echo '<canvas id="canvas" width="1100" height="200"></canvas>';
-                       }
-                    ?>-->
+		    <header class="special">
+			<h2>Pingouin</h2>
+			<div class="score-container">
+			    <div id="bestScore"></div>
+			    <div id="currentScore"></div>
+			</div>
+		    </header>
+			<canvas id="canvas"></canvas>
                 </div>
             </section>
 
