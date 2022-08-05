@@ -5,8 +5,8 @@ const fond2 = new Image();
 const character = new Image();
 const obstacle = new Image();
 
-fond1.src = './game/media/fond1.jpg';
-fond2.src = './game/media/fond2.jpg';
+fond1.src = './game/media/fond.jpg';
+fond2.src = './game/media/fond.jpg';
 character.src = './game/media/character.png';
 obstacle.src = './game/media/obstacle.png'
 
