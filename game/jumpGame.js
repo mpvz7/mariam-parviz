@@ -5,19 +5,19 @@ const fond2 = new Image();
 const character = new Image();
 const obstacle = new Image();
 
-fond1.src = './game/media/fond.jpg';
-fond2.src = './game/media/fond.jpg';
+fond1.src = './game/media/fond1.jpg';
+fond2.src = './game/media/fond2.jpg';
 character.src = './game/media/character.png';
 obstacle.src = './game/media/obstacle.png'
 
 // general settings
 let gamePlaying = false;
-const gravity = 1;
-const speed = 6.2;
-const size = [50,67];
-const jump = -11.5;
-const cTenth = (canvas.width / 5);
-const characterHeight = canvas.height - size[1]*1.25;
+const gravity = 0.5;
+const speed = 3.2;
+const size = [91,70];
+const jump = -12.5;
+const cTenth = (canvas.width / 8);
+const characterHeight = canvas.height - size[1];
 
 let index = 0,
     bestScore = 0,
@@ -26,9 +26,9 @@ let index = 0,
     flight,
     flyHeight;
 
-const obstaclesWidth = 147;
-const obstaclesGap = 270;
-const obstaclesLocation = () => Math.max(Math.random() * canvas.width, Math.random() * obstaclesGap)+canvas.width;
+const obstaclesWidth = size[1]/2;
+const obstaclesGap =  canvas.width*3;
+const obstaclesLocation = () =>Math.random(canvas.width*2, obstaclesGap)+canvas.width;
 
 const setup = () => {
   currentScore = 0;
@@ -51,9 +51,9 @@ const render = () => {
 
 
     if(gamePlaying){
-        //pingouin qui character à gauche quand on joue    
+        //character à gauche quand on joue    
         ctx.drawImage(character, cTenth, flyHeight, ...size);
-        //pinguouin qui saute
+        //character qui saute
     	flight += gravity;
    		flyHeight = Math.min(flyHeight + flight, characterHeight);
       flyHeight = Math.max(flyHeight, 0);
@@ -61,7 +61,7 @@ const render = () => {
    		//obstacles display
    		for (let i = 0; i <3 ; i++) {
    			obstacles[i] -= speed;
-			ctx.drawImage(obstacle, obstacles[i], characterHeight);
+			ctx.drawImage(obstacle, obstacles[i], characterHeight+size[1]/2, size[0]/2, size[1]/2);
 
   			//touche top obstacles, end
   			if(Math.round(obstacles[i]) <= (cTenth + 25) && 
@@ -80,7 +80,7 @@ const render = () => {
       }
 
     }else{
-        //pingouin qui character centrer quand on ne joue pas
+        //character centre quand on ne joue pas
         flyHeight = (canvas.width - size[0])/2;
         ctx.drawImage(character, flyHeight, characterHeight);
 
@@ -101,4 +101,13 @@ character.onload = render;
 
 // start game
 document.addEventListener('click', () => gamePlaying = true);
+document.addEventListener('keyup', event => {
+    if (event.code === 'Enter') {
+        gamePlaying = true
+    }
+  })
 window.onclick = () => flight = jump;
+document.body.onkeydown = function(e) {
+    if (e.keyCode == 13)
+        flight = jump;
+};

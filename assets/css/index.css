@@ -5,50 +5,49 @@
     --main-grey-color: #434343;
 }
 
-.holster {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-flow: column nowrap;
-}
-.holster .container {
-    display: flex;
-    flex-flow: column nowrap;
-    overflow: auto;
-    height: 95vh;
+body{
     width: 100vw;
-    object-fit: cover;
-    right: 0;
-    bottom: 0;
-    /* scroll-snap */
-    scroll-snap-type: y mandatory;
 }
 
-.holster .container > * {
-    text-align: center;
-    scroll-snap-align: center;
-    flex: none;
-    height: 100vh;
-    overflow:auto;
+@media screen and (min-width: 980px) {
+    .holster {
+        flex-flow: column nowrap;
+    }
+    .holster .container {
+        display: flex;
+        flex-flow: column nowrap;
+        overflow: auto;
+        height: 93vh;
+        object-fit: cover;
+        right: 0;
+        bottom: 0;
+        /* scroll-snap */
+        scroll-snap-type: y mandatory;
+    }
+    
+    .holster .container > * {
+        text-align: center;
+        scroll-snap-align: center;
+        flex: none;
+        height: 100vh;
+        overflow:auto;
+    }
 }
 
 /* appearance fixes */
 /* coloration */
 .holster .container > section:nth-child(odd) {
     background: linear-gradient(315deg, var(--main-pink-color) 0%, var(--main-purple-color) 74%);
-    z-index: 1;
 }
 
 .holster .container > section:nth-child(even) {
     background-color: #000000;
     background-image: linear-gradient(147deg, #000000 0%, var(--main-grey-color) 74%);
-    z-index: 1;
 }
 .holster .container > section:first-child {
     background-color: var(--main-purple-color);
-    z-index: 1;
 }
 canvas{
-    width: 100%;
-    height: 80%;
+    width: auto;
+    height: auto;
 }

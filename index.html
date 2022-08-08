@@ -12,7 +12,7 @@
 		<link rel="stylesheet" href="game/jumpGame.css" />
 		<link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
 	</head>
-    <body class="holster">
+    <body class="holster" style="height: 0;">
         <header id="header">
             <strong><a class="logo" href="index.html">Mariam Parviz</a></strong>
             <nav>
@@ -52,6 +52,7 @@
                                     <h3>Mes expériences professionnelles</h3>
                                 </header>
                                 <p>Principalement des emplois à durées déterminées pendant la période saisonnière et des jobs étudiants en parallèle aux études.</p>
+                                <p><a href="../CV-Mariam-Parviz.pdf" download="CV-Mariam-Parviz">Currivulum vitae </a></p>
                             </div>
                         </section>
                         <section>
@@ -70,33 +71,6 @@
                                     <h3>Mes projets informatique</h3>
                                 </header>
                                 <p>Je réalise des projets, que ce soit dans ou hors du cadre scolaire, que vous pourrez découvrir ici.</p>
-                            </div>
-                        </section>
-                        <section>
-                            <div class="content">
-                                <header>
-                                    <a href="#" class="icon fa-coffee"><span class="label">Icon</span></a>
-                                    <h3>Mes centres d'intérêt</h3>
-                                </header>
-                                <p>Parmis mes hobbies nous pouvons compter la couture, le théâtre et le voyage.</p>
-                            </div>
-                        </section>
-                        <section>
-                            <div class="content">
-                                <header>
-                                    <a href="#" class="icon fa-qrcode"><span class="label">Icon</span></a>
-                                    <h3>Mon Curriculum Vitae</h3>
-                                </header>
-                                <p>Vous pouvez télécharger directement la dernière version de mon CV <a href="../CV-Mariam-Parviz.pdf" download="CV-Mariam-Parviz">ici</a>.</p>
-                            </div>
-                        </section>
-                        <section>
-                            <div class="content">
-                                <header>
-                                    <a href="#footer" class="icon fas fa-envelope"><span class="label">Icon</span></a>
-                                    <h3>Mon contact</h3>
-                                </header>
-                                <p>Mes coordonnées, mon Linkedin et un formulaire de contact sont à votre disposition pour une communication efficace.</p>
                             </div>
                         </section>
                     </div>
@@ -118,7 +92,8 @@
             </section>
 
         <!--Atouts -->
-            <section class="wrapper">
+        <section class="wrapper">
+            <div class="inner">
                 <div class="highlights">
                     <section>
                         <div class="content">
@@ -134,24 +109,26 @@
                         <div class="content">
                             <header>
                                 <a href="#" class="icon fa-paper-plane-o"><span class="label">Icon</span></a>
-                                <h3>Sans frontière</h3>
+                                <h3>Pro active</h3>
                             </header>
-                            <p>Maîtrise de Notepad++, Eclipse, Mamp et bon niveau en anglais,
-                            capacités relationnelles développées, aptitudes au travail en équipe.</p>
+                            <p>Maîtrise des environnements de développement tel que IntelliJ, Eclipse, Mamp. Je travaille régulièrement en 
+                                Java, Python, PHP, HTML/CSS/Javascript et particulièrement NodeJs, VueJS, et Angular. 
+                            </p>
                         </div>
                     </section>
                     <section>
                         <div class="content">
                             <header>
                                 <a href="#" class="icon fa-book"><span class="label">Icon</span></a>
-                                <h3>Pro active</h3>
+                                <h3>Sans frontière</h3>
                             </header>
-                            <p>J’accorde une importance particulière au changement de mon secteur d’activité.
-                            Je tente ainsi de les anticiper afin d‘affiner mes compétences.</p>
+                            <p>J’accorde une importance particulière au changement de mon secteur d’activité. Un bon niveau en anglais,
+                                capacités relationnelles développées, aptitudes au travail en équipe.</p>
                         </div>
                     </section>
                 </div>
-            </section>
+            </div>
+        </section>
 
         <!-- Annedote -->
             <section id="cta" class="wrapper">
@@ -206,7 +183,7 @@
                     </div>
                 </div>
             </section>
-	    </div>
+	    
 		
 	<!-- Footer -->
 	    <footer id="footer">
@@ -225,22 +202,19 @@
 			    <li><a href="https://github.com/mpvz7" target="_blank"><i class="fa fa-github">&nbsp;</i>Github</a></li>
 			</ul>
 		    </div>
-		    <div class="form">
+		    <div class="footerForm">
 			<h4>Form</h4>
 			<form>
 			    <div class="formText">
-				<input id="contactNameInpt" type="text">
-				<input id="contactMailInpt" type="text">
-				<input id="contactProjectInpt" type="text">
-				Hello,
-				<br/>
-				<br/>
-				Je suis
-				<div class="cFormInput" id="contactNameEdit" data-target="contactNameInpt" contenteditable="true">votre nom</div>
-				, mon adresse mail est
-				<div class="cFormInput" id="contactMailEdit" data-target="contactMailInpt" contenteditable="true">votre mail</div>
-				et j'aimerais discuter
-				<div class="cFormInput" id="contactProjectEdit" data-target="contactProjectInpt" contenteditable="true">à propos de</div>.
+                    <input id="contactNameInpt" type="text">
+                    <input id="contactMailInpt" type="text">
+                    <input id="contactProjectInpt" type="text">
+                    Hello ! Je suis
+                    <div class="cFormInput" id="contactNameEdit" data-target="contactNameInpt" contenteditable="true">votre nom</div>
+                    , mon adresse mail est
+                    <div class="cFormInput" id="contactMailEdit" data-target="contactMailInpt" contenteditable="true">votre mail</div>
+                    et j'aimerais discuter
+                    <div class="cFormInput" id="contactProjectEdit" data-target="contactProjectInpt" contenteditable="true">à propos de</div>.
 			    </div>
 			    <button class="gradButton" type="submit">Envoyer</button>
 			</form>
@@ -250,6 +224,7 @@
 		    &copy; Mariam Parviz
 		</div>
 	</footer>
+        </div>
 	</body>
     <script src="game/jumpGame.js"></script>
     <script src="assets/skrollr.js"></script>

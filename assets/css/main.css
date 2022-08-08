@@ -1,5 +1,4 @@
 @import url(font-awesome.min.css);
-@import url("https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600");
 
 /* Variables */
 :root {
@@ -135,7 +134,7 @@ p {
 
 header.special {
   text-align: center;
-  margin-bottom: 4rem; }
+  margin: 2rem; }
   header.special p {
     max-width: 75%;
     margin-left: auto;
@@ -145,8 +144,7 @@ header.special {
 h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
   line-height: 1.5;
-  text-transform: uppercase;
-  margin: 0 0 1.5rem 0; }
+  text-transform: uppercase; }
   h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     color: inherit;
     text-decoration: none; } 
@@ -214,7 +212,6 @@ hr {
 /* Inner */
 .inner {
   margin: 0 auto;
-  width: 75rem;
   max-width: calc(100% - 6rem); }
   @media screen and (max-width: 480px) {
     .inner {
@@ -338,9 +335,8 @@ button,
   
 /* Form */
 form {
-  margin: 0 0 2rem 0;}
-form div{
-  margin : 2rem 0 0 0;}
+  margin: 0 0 2rem 0;
+}
 
 form .button{
   display: flex;
@@ -664,7 +660,7 @@ table.alt tbody tr td {
   .highlights .content {
     border-radius: 4px;
     height: 100%;
-    padding: 3rem;
+    padding: 2rem;
     text-align: center; 
     align-content: center;}
     .highlights .content .icon {
@@ -980,6 +976,8 @@ ul.icons {
 .wrapper {
   padding: 8rem 0 6rem 0 ;
   position: relative;
+  display: flex;
+  align-items: center;
   z-index: 1; }
   @media screen and (max-width: 1280px) {
     .wrapper {
@@ -1005,7 +1003,6 @@ ul.icons {
   -webkit-justify-content: center;
   -ms-justify-content: center;
   justify-content: center;
-  background-image: url("Documents/Site/mariam-parviz/assets/images/banner.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1068,6 +1065,7 @@ ul.icons {
       display: none; } }
   @media screen and (max-width: 736px) {
     #banner {
+      background-image: url("../images/banner.jpg");
       height: 100vh !important;
       min-height: 0;
       padding: 4rem 2rem 4rem 2rem; }
@@ -1100,7 +1098,7 @@ ul.icons {
   background-color: var(--main-purple-color);
   color: rgba(255, 255, 255, 0.75);
   background-attachment: fixed;
-  background-image: linear-gradient(315deg, var(--main-pink-color) 0%, var(--main-purple-color) 74%), url(Documents/Site/mariam-parviz/assets/images/cta01.jpg);
+  background-image: linear-gradient(315deg, var(--main-pink-color) 0%, var(--main-purple-color) 74%), url(../images/cta01.jpg);
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1210,7 +1208,6 @@ ul.icons {
     justify-content: space-between;
     padding: 1rem;
     background-color: black;
-    height: 5vh;
     width: 100vw;
 }
 
@@ -1457,35 +1454,51 @@ ul.icons {
   padding-bottom: 1em;
 }
 
-#footer .content{
-  display: flex;
-  justify-content: space-around;
-  text-align: justify;
+@media screen and (min-width: 680px) {
+  #footer .content{
+    display: flex;
+    flex-direction: row;
+    text-align: justify;
+    justify-content: space-around;
+  }
+
+  .aboutMe, .footerForm{
+    padding: 10% 0;
+    width: 30%;
+  }
+  .contactMe{
+    padding-top: 10%;
+    width: 20%;
+  }
+}
+@media screen and (max-width: 680px) {
+  #footer .content{
+    flex-direction: column;
+  }
+  #footer p{
+    padding: 2rem;
+  }
+  .footerForm button{
+    margin-left: 40%;
+  }
 }
 
-.aboutMe, .form{
-  padding: 10% 0;
-  width: 30%;
-}
-.contactMe{
-  padding-top: 10%;
-  width: 20%;
-}
 
 .cFormInput {
   outline: 0;
   color: #ffa69e;
-  padding: 1em 1em;
+  padding: 0 1em;
   background: transparent;
   transition: border-color 0.2s;
   overflow-wrap: break-word;
+  height: 1rem;
 }
 
 .cFormInput:focus{
   content: none;
 }
 
-.form input {
+.footerForm input {
   visibility: hidden;
   position: absolute;
   overflow-wrap: break-word;
@@ -1498,7 +1511,7 @@ ul.icons {
   overflow-wrap: break-word;
 }
 
-.form button{
+.footerForm button{
   background: no-repeat center, linear-gradient(315deg, #ffa69e 0%, #5d4954 74%);
   cursor: pointer;
   outline: none;
