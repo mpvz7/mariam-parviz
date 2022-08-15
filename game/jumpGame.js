@@ -6,7 +6,7 @@ const character = new Image();
 const obstacle = new Image();
 
 fond1.src = './game/media/fond1.jpg';
-fond2.src = './game/media/fond2.jpg';
+fond2.src = './game/media/fond1.jpg';
 character.src = './game/media/character.png';
 obstacle.src = './game/media/obstacle.png'
 
@@ -31,11 +31,11 @@ const obstaclesGap =  canvas.width*3;
 const obstaclesLocation = () =>Math.random(canvas.width*2, obstaclesGap)+canvas.width;
 
 const setup = () => {
-  currentScore = 0;
-  flight = jump;
+    currentScore = 0;
+    flight = jump;
 
   // set initial flyHeight
-  flyHeight = characterHeight;
+    flyHeight = characterHeight;
 
   // setup first 3 pipes
   	obstacles = [obstaclesLocation(),obstaclesLocation(), obstaclesLocation()];
@@ -49,14 +49,13 @@ const render = () => {
     ctx.drawImage(fond1, -index*(speed/2)%canvas.width + canvas.width, 0,canvas.width, canvas.height);
     ctx.drawImage(fond2,  -index*(speed/2)%canvas.width, 0,canvas.width, canvas.height);
 
-
     if(gamePlaying){
         //character à gauche quand on joue    
         ctx.drawImage(character, cTenth, flyHeight, ...size);
         //character qui saute
     	flight += gravity;
    		flyHeight = Math.min(flyHeight + flight, characterHeight);
-      flyHeight = Math.max(flyHeight, 0);
+        flyHeight = Math.max(flyHeight, 0);
 
    		//obstacles display
    		for (let i = 0; i <3 ; i++) {
@@ -85,9 +84,9 @@ const render = () => {
         ctx.drawImage(character, flyHeight, characterHeight);
 
         //texte sur le canvas quand on ne joue pas
-        ctx.fillText(`Meilleur score : ${bestScore}`, canvas.width/5 , 50);
-        ctx.fillText('Cliquez pour jouer', canvas.width/5, 190);
-        ctx.font = "bold 30px courrier";
+        ctx.fillText(`Meilleur score : ${bestScore}`, 0, canvas.height/5);
+        ctx.fillText('Cliquez pour jouer', 0, (canvas.height*2)/5);
+        ctx.font = "bold 2rem courrier";
     }
 
     document.getElementById('bestScore').innerHTML = `Meilleur : ${bestScore}`;
@@ -106,8 +105,19 @@ document.addEventListener('keyup', event => {
         gamePlaying = true
     }
   })
-window.onclick = () => flight = jump;
+
+function keyboard_off(e)
+{
+    if(e.keyCode > 0) e.returnValue = false;
+    if(e.which > 0) return false;
+}
+
+window.onclick = () => {
+    flight = jump;
+}
 document.body.onkeydown = function(e) {
-    if (e.keyCode == 13)
+    if (e.keyCode == 13){
         flight = jump;
+        setTimeout(keyboard_off(e), 1000)
+    }
 };
