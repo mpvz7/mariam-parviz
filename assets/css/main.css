@@ -7,13 +7,113 @@
   --main-grey-color: #434343;
 }
 
+:root,
+:root.dark {
+  --bg-color: black;
+  --text-color: white;
+}
+
+:root.light {
+  --bg-color: white;
+  --text-color: --main-grey-color;
+}
+
+
+body{
+  width: 100vw;
+}
+
+/* appearance fixes */
+/* coloration */
+.holster .container > section:nth-child(odd) {
+  background: linear-gradient(315deg, var(--main-pink-color) 0%, var(--main-purple-color) 74%);
+}
+
+.holster .container > section:nth-child(even) {
+  background: var(--bg-color);
+}
+.holster .container > section:first-child {
+  background-color: var(--main-purple-color);
+}
+
+.jumpingGame{
+  width: 100%;
+}
+
+#canvas{
+  width: 100%;
+  height: auto;
+}
+
+
+@media screen and (min-width: 980px) {
+  .holster {
+    flex-flow: column nowrap;
+  }
+  .holster .container {
+    display: flex;
+    flex-flow: column nowrap;
+    overflow: auto;
+    height: 93vh;
+    object-fit: cover;
+    right: 0;
+    bottom: 0;
+    /* scroll-snap */
+    scroll-snap-type: y mandatory;
+  }
+
+  .holster .container > * {
+    text-align: center;
+    scroll-snap-align: center;
+    flex: none;
+    height: 100vh;
+    overflow:auto;
+  }
+
+  #canvas{
+    width: 50%;
+  }
+
+  /* -- ARROW 6      -- */
+
+  .arrow-6 {
+    /* more triangle */
+    height: 10px; width: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-width: 3px 3px 0 0;
+    transform: rotate(45deg);
+  }
+
+  .arrow-6:before, .arrow-6:after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 10px; width: 10px;
+    border-width: 3px 3px 0 0;
+  }
+
+  .arrow-6:before {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-width: 3px 3px 0 0;
+    /* top - distance minus border */
+    top: 7px; left: -10px;
+  }
+
+  .arrow-6:after {
+    border: 1px solid rgba(255, 255, 255, 1);
+    border-width: 3px 3px 0 0;
+    /* top - distance plus border */
+    top: -13px; left: 10px;
+  }
+}
 
 /* Basic */
 body {
   -ms-overflow-style: scrollbar;
   position: relative;
   scroll-snap-type: none;
-  overflow-x: hidden; /* Hide horizontal scrollbar */
+  overflow-x: hidden;
+  /* Hide horizontal scrollbar */
 }
   
 @media screen and (max-width: 480px) {
@@ -105,8 +205,8 @@ html {
     html {
       font-size: 11pt; } }
 
-body {
-  color: var(--main-grey-color); }
+#index {
+  color: var(--text-color); }
   
 body, input, select, textarea {
   font-family: "Raleway", Arial, Helvetica, sans-serif;
@@ -140,7 +240,7 @@ header.special {
     max-width: 75%;
     margin-left: auto;
     margin-right: auto;
-    color: white}
+    color: var(--text-color)}
   
 h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
@@ -197,7 +297,7 @@ h1, h2, h4, h5, h6 {
   color: var(--main-pink-color); }
 
 h3 {
-  color: var(--main-purple-color);
+  color: white;
 }
 blockquote {
   border-left-color: rgba(0, 0, 0, 0.25); }
@@ -219,7 +319,7 @@ hr {
       max-width: calc(100% - 3rem); } }
 
 
-/* Button */
+/* Button
 input[type="submit"],
 input[type="reset"],
 input[type="button"],
@@ -332,8 +432,8 @@ button,
       input[type="button"].primary:hover:active,
       button.primary:hover:active,
       .button.primary:hover:active {
-        background-color: var(--main-purple-color); }   
-  
+        background-color: var(--main-purple-color); }
+ */
 /* Form */
 form {
   margin: 0 0 2rem 0;
@@ -659,7 +759,7 @@ table.alt tbody tr td {
   .highlights > :nth-child(3n) {
     width: calc(33.3333333333% + -0.5rem); }
   .highlights .content {
-    border-radius: 4px;
+    border-radius: 5%;
     height: 100%;
     padding: 2rem;
     text-align: center; 
@@ -751,7 +851,7 @@ table.alt tbody tr td {
       width: calc(100% + 1rem); } }
    
 .highlights .content {
-  background: #ffffff;
+  background-image: linear-gradient(to right bottom, #ebdac0, #cdb1a1, #aa8b86, #84686d, #5d4954);
   box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.025); } 
 #contact .highlights{
   align-items: center;}
@@ -901,7 +1001,7 @@ table.alt tbody tr td {
       width: calc(100% + 1rem); } }
 
 .testimonials .content {
-  background: #ffffff;
+  background: linear-gradient(to right bottom, #ebdac0, #cdb1a1, #aa8b86, #84686d, #5d4954);;
   box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.025); }
   .testimonials .content .credit strong {
     color: black; }
@@ -1208,22 +1308,52 @@ ul.icons {
     display: flex;
     justify-content: space-between;
     padding: 1rem;
-    background-color: black;
+    background-color: var(--bg-color);
     width: 100vw;
 }
 
 #header a {
     text-decoration: none;
-    color: white;
+    color: var(--text-color);
     padding-right: 0.5rem;
 }
-
 #header .links {
     opacity: 0.8;
 }
-
 #header nav{
     text-align: right;
+}
+
+/*Dark mode*/
+.theme-btn {
+  width: 2.5em;
+  height: 2.5em;
+  padding: 0.5em;
+
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+.theme-btn p {
+  margin: 0;
+  font-size: 1.5em;
+  object-fit: cover;
+}
+.theme-btn.light {
+  display: none;
+  color: navajowhite;
+  background-color: lightskyblue;
+}
+.theme-btn.dark {
+  color: yellow;
+  background-color: black;
+}
+.dark .theme-btn.dark {
+  display: none;
+}
+.dark .theme-btn.light {
+  display: block;
 }
 
 
@@ -1513,7 +1643,7 @@ ul.icons {
 }
 
 .footerForm button{
-  background: no-repeat center, linear-gradient(315deg, #ffa69e 0%, #5d4954 74%);
+  background: no-repeat center, linear-gradient(315deg, var(--main-grey-color) 0%, #5d4954 74%);
   cursor: pointer;
   outline: none;
   display: block;
@@ -1530,3 +1660,5 @@ ul.icons {
   font-family: "Montserrat", sans-serif;
   color: #fff;
 }
+
+

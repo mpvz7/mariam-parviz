@@ -4,7 +4,32 @@
     --main-purple-color: #5d4954;
     --main-grey-color: #434343;
 }
+:root,
+:root.light {
+    --bg-color: white;
+    --text-color: --main-grey-color;
+}
 
+:root.dark {
+    --bg-color: black;
+    --text-color: white;
+}
+
+.theme-btn {
+    width: 3em;
+    height: 3em;
+    padding: 0.5em;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
+.theme-btn img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
 body{
     width: 100vw;
 }
@@ -16,8 +41,7 @@ body{
 }
 
 .holster .container > section:nth-child(even) {
-    background-color: #000000;
-    background-image: linear-gradient(147deg, #000000 0%, var(--main-grey-color) 74%);
+    background: var(--bg-color);
 }
 .holster .container > section:first-child {
     background-color: var(--main-purple-color);
@@ -59,5 +83,37 @@ body{
 
     #canvas{
         width: 50%;
+    }
+
+    /* -- ARROW 6      -- */
+
+    .arrow-6 {
+        /* more triangle */
+        height: 10px; width: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        border-width: 3px 3px 0 0;
+        transform: rotate(45deg);
+    }
+
+    .arrow-6:before, .arrow-6:after {
+        content: '';
+        position: absolute;
+        display: block;
+        height: 10px; width: 10px;
+        border-width: 3px 3px 0 0;
+    }
+
+    .arrow-6:before {
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-width: 3px 3px 0 0;
+        /* top - distance minus border */
+        top: 7px; left: -10px;
+    }
+
+    .arrow-6:after {
+        border: 1px solid rgba(255, 255, 255, 1);
+        border-width: 3px 3px 0 0;
+        /* top - distance plus border */
+        top: -13px; left: 10px;
     }
 }

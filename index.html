@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 
-<html lang="fr">
+<html lang="fr" class="dark">
 	<head>
 		<title>Bienvenue !</title>
 		<meta charset="utf-8" />
@@ -8,11 +8,10 @@
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="assets/css/index.css" />
 		<link rel="stylesheet" href="game/jumpGame.css" />
 		<link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
 	</head>
-    <body class="holster" style="height: 0;">
+    <body id="index" class="holster" style="height: 0;">
         <header id="header">
             <strong><a class="logo" href="index.html">Mariam Parviz</a></strong>
             <nav>
@@ -21,8 +20,17 @@
                 <a class="links" href="src/projet.html">Projets</a>
                 <a class="links" href="#footer">Contact</a>
             </nav>
+            <div class="toggle-container">
+                <button class="theme-btn light" onclick="setTheme('light')" title="Light mode">
+                    <p class="icon fa-sun-o"></p>
+                </button>
+                <button class="theme-btn dark" onclick="setTheme('dark')" title="Dark mode">
+                    <p class="icon fa-moon-o"></p>
+                </button>
+            </div>
         </header>
         <div class="container">
+
             <!-- Bannière -->
             <section id="banner">
                 <div class="inner" data-0-top="opacity:1;left:0;" data-0-top="opacity:0;left:100px;">
@@ -31,6 +39,9 @@
 			Une mise à jour du site est en cours...</p>
                 </div>
                 <video autoplay loop muted playsinline src="assets/images/banner.mp4"></video>
+                <div class="arrowed">
+                    <div class="arrow-6"></div>
+                </div>
             </section>
 
             <!-- Centre -->
@@ -51,8 +62,8 @@
                                     <a href="src/emploi.html" class="icon fa-vcard-o"><span class="label">Icon</span></a>
                                     <h3>Mes expériences professionnelles</h3>
                                 </header>
-                                <p>Principalement des emplois à durées déterminées pendant la période saisonnière et des jobs étudiants en parallèle aux études.</p>
-                                <p><a href="../CV-Mariam-Parviz.pdf" download="CV-Mariam-Parviz">Currivulum vitae </a></p>
+                                <p>Principalement des emplois à durées déterminées pendant la période saisonnière et des jobs étudiants en parallèle aux études.
+                                <a href="../CV-Mariam-Parviz.pdf" download="CV-Mariam-Parviz">[Currivulum vitae]</a></p>
                             </div>
                         </section>
                         <section>
@@ -130,7 +141,7 @@
                 </div>
             </section>
 
-        <!-- Annedote -->
+        <!-- Gallery -->
             <section id="cta" class="wrapper">
                 <div class="inner">
                     <p>Si la Terre faisait la taille d’un grain de sable, le Soleil ferait la taille d’une orange.</p>
@@ -216,7 +227,7 @@
                             et j'aimerais discuter
                             <div class="cFormInput" id="contactProjectEdit" data-target="contactProjectInpt" contenteditable="true">à propos de</div>.
                         </div>
-                        <button class="gradButton" type="submit">Envoyer</button>
+                        <button class="gradButton" type="submit" disabled>Envoyer</button>
                     </form>
                     </div>
                 </div>
@@ -230,5 +241,6 @@
     <script src="assets/skrollr.js"></script>
     <script type="text/javascript">
         var s = skrollr.init();
+        const setTheme = theme => document.documentElement.className = theme;
     </script>
 </html>
