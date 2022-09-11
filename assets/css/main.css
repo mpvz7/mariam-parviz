@@ -18,7 +18,6 @@
   --text-color: --main-grey-color;
 }
 
-
 body{
   width: 100vw;
   background-color: var(--bg-color);
@@ -34,6 +33,18 @@ body{
   height: auto;
 }
 
+/* -- ARROW      -- */
+.arrow{
+  position: inherit;
+  position: absolute;
+  bottom: 10%;
+  right: 50%;
+  font-size: 2rem;
+  z-index: 1;
+}
+.arrow p {
+  margin: 0;
+}
 
 @media screen and (min-width: 980px) {
   :root {
@@ -84,44 +95,12 @@ body{
     text-align: center;
     scroll-snap-align: center;
     flex: none;
-    height: 100vh;
+    height: 98vh;
     overflow:auto;
   }
 
   #canvas{
     width: 50%;
-  }
-
-  /* -- ARROW 6      -- */
-
-  .arrow-6 {
-    /* more triangle */
-    height: 10px; width: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    border-width: 3px 3px 0 0;
-    transform: rotate(45deg);
-  }
-
-  .arrow-6:before, .arrow-6:after {
-    content: '';
-    position: absolute;
-    display: block;
-    height: 10px; width: 10px;
-    border-width: 3px 3px 0 0;
-  }
-
-  .arrow-6:before {
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-width: 3px 3px 0 0;
-    /* top - distance minus border */
-    top: 7px; left: -10px;
-  }
-
-  .arrow-6:after {
-    border: 1px solid rgba(255, 255, 255, 1);
-    border-width: 3px 3px 0 0;
-    /* top - distance plus border */
-    top: -13px; left: 10px;
   }
 }
 
@@ -136,7 +115,7 @@ body {
   
 @media screen and (max-width: 480px) {
 html, body {
-  min-width: 320px; } }
+  min-width: 320px;} }
   
 html {
   box-sizing: border-box;
@@ -160,7 +139,6 @@ section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
   font: inherit;
   vertical-align: baseline;
   cursor: url('../images/cursor.png'), auto; !important;
@@ -184,7 +162,6 @@ ol, ul {
 blockquote, q {
   quotes: none; }
   blockquote:before, blockquote:after, q:before, q:after {
-    content: '';
     content: none; }
 
 table {
@@ -474,7 +451,6 @@ textarea {
   -ms-appearance: none;
   appearance: none;
   border-radius: 4px;
-  border: none;
   border: solid 1px;
   color: inherit;
   display: block;
@@ -1159,7 +1135,7 @@ ul.icons {
     text-decoration: none; }
     #banner a:hover {
       color: #ffffff; }
-  
+
   #banner video {
     height: 100vh;
     width: 100vw;
@@ -1211,7 +1187,7 @@ ul.icons {
     opacity: 0; }
   body.is-preload #banner:before {
     opacity: 1; }
-  
+
 /* CTA */
 #cta {
   color: rgba(255, 255, 255, 0.75);
@@ -1264,10 +1240,10 @@ ul.icons {
     border-color: rgba(255, 255, 255, 0.25); }
   #footer .highlights .content {
     background: #111111;
-    box-shadow: 0px 0px 4px 1px rgba(255, 255, 255, 0.025); }
+    box-shadow: 0 0 4px 1px rgba(255, 255, 255, 0.025); }
   #footer .testimonials .content {
     background: #111111;
-    box-shadow: 0px 0px 4px 1px rgba(255, 255, 255, 0.025); }
+    box-shadow: 0 0 4px 1px rgba(255, 255, 255, 0.025); }
     #footer .testimonials .content .credit strong {
       color: var(--main-purple-color); }
   #footer a {
@@ -1528,10 +1504,10 @@ ul.icons {
     border-color: rgba(255, 255, 255, 0.25); }
   #heading .highlights .content {
     background: #111111;
-    box-shadow: 0px 0px 4px 1px rgba(255, 255, 255, 0.025); }
+    box-shadow: 0 0 4px 1px rgba(255, 255, 255, 0.025); }
   #heading .testimonials .content {
     background: #111111;
-    box-shadow: 0px 0px 4px 1px rgba(255, 255, 255, 0.025); }
+    box-shadow: 0 0 4px 1px rgba(255, 255, 255, 0.025); }
     #heading .testimonials .content .credit strong {
       color: var(--main-purple-color); }
 
@@ -1559,7 +1535,7 @@ ul.icons {
 #main .content {
   background: #ffffff;
   border-radius: 4px;
-  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.025);
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.025);
   margin-bottom: 2rem;
   padding: 3rem; }
   @media screen and (max-width: 980px) {
@@ -1693,7 +1669,7 @@ ul.icons {
   padding: 1em 1em 2em 1em;
   background: #eee;
   border: 1px solid #fff;
-  -moz-box-shadow: 0em 1em 2em #333;
+  -moz-box-shadow: 0 1em 2em #333;
 }
 .gallery li a.pic-1, a.pic-6,a.pic-7 {
   z-index: 1;
@@ -1714,9 +1690,9 @@ ul.icons {
   z-index: 100;
   -moz-box-shadow: 1em 1.5em 2em #333;
 }
+
 @media screen and (min-width: 980px) {
   .gallery{
-    scroll-snap-type: x mandatory;
+    scroll-snap-type: x;
   }
 }
-
