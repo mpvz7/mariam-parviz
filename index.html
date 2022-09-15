@@ -1,17 +1,17 @@
 <!DOCTYPE HTML>
 
-<html lang="fr" class="dark" style="overflow: initial!important;">
+<html lang="fr" class="light">
 	<head>
 		<title>Bienvenue !</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/index.css" />
 		<link rel="stylesheet" href="game/jumpGame.css" />
 		<link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
 	</head>
-    <body id="index" class="holster" style="height: 0;overflow: initial!important;">
+    <body id="index" class="holster">
         <header id="header">
             <strong><a class="logo" href="index.html">Mariam Parviz</a></strong>
             <nav>
@@ -22,7 +22,7 @@
             </nav>
             <div class="toggle-container">
                 <button class="theme-btn light" onclick="setTheme('light')" title="Light mode">
-                    <p class="icon fa-sun-o"></p>
+                    <p class="icon fa-cloud"></p>
                 </button>
                 <button class="theme-btn dark" onclick="setTheme('dark')" title="Dark mode">
                     <p class="icon fa-moon-o"></p>
@@ -33,57 +33,167 @@
 
             <!-- Bannière -->
             <section id="banner">
-                <div class="inner" data-0-top="opacity:1;left:0;" data-0-top="opacity:0;left:100px;">
-                    <h1>Mariam Parviz</h1>
-                    <p>Bienvenue sur mon portfolio !</p>
+                <div class="inner">
+                    <h1>Portefolio</h1>
+                    <p>Equipée d'une Licence de Mathématiques Génerales, je suis actuellement en 2nd année de formation <span>Ingénieurie Logicielle</span> à l'IMT Atlantique.</p>
+                    <p>Organisée, rigoureuse et dynamique.</p>
+                    <p>Je cherche perpétuellement à acquérir de nouvelles connaissances et compétences.</p>
                 </div>
                 <video autoplay loop muted playsinline src="assets/images/banner.mp4"></video>
-                <div class="arrow">
-                    <p>Slider</p>
-                    <span class="icon fa-arrow-down"></span>
+                <div id="arrow">
                 </div>
             </section>
 
-            <!-- Centre -->
+            <!-- Experiences professionnelles -->
             <section class="wrapper">
-                <div class="inner">
-                    <header class="special">
-                        <h2>Qui suis-je ?</h2>
-                        <p>Equipée d'une Licence de Mathématiques Génerales, je suis actuellement en 1ère année de formation Ingénieurie Logicielle à l'IMT Atlantique.
-                        <br>Je suis organisée, rigoureuse et dynamique,
-                        je parle deux langues couramment et une autre de niveau avancée.
-                        <br>D’une personnalité proactive, pluriculturelle et d’une grande adaptabilité,
-                        je reste très au fait des évolutions de mon secteur d’activité et cherche perpétuellement à acquérir de nouvelles connaissances et compétences.</p>
-                    </header>
-                    <div class="highlights">
-                        <section>
-                            <div class="content">
-                                <header>
-                                    <a href="src/emploi.html" class="icon fa-vcard-o"><span class="label">Icon</span></a>
-                                    <h3>Mes expériences professionnelles</h3>
-                                </header>
-                                <p>Principalement des emplois à durées déterminées pendant la période saisonnière et des jobs étudiants en parallèle aux études.
-                                <a href="../CV-Mariam-Parviz.pdf" download="CV-Mariam-Parviz">[Currivulum vitae]</a></p>
-                            </div>
-                        </section>
-                        <section>
-                            <div class="content">
-                                <header>
-                                    <a href="src/formation.html" class="icon fa-files-o"><span class="label">Icon</span></a>
-                                    <h3>Mes études</h3>
-                                </header>
-                                <p>Mes trois domaines de coeur sont : l'informatique (vous l'auriez deviné), les mathématiques et la santé.</p>
-                            </div>
-                        </section>
-                        <section>
-                            <div class="content">
-                                <header>
-                                    <a href="src/projet.html" class="icon fa-floppy-o"><span class="label">Icon</span></a>
-                                    <h3>Mes projets informatique</h3>
-                                </header>
-                                <p>Je réalise des projets, que ce soit dans ou hors du cadre scolaire, que vous pourrez découvrir ici.</p>
-                            </div>
-                        </section>
+                <h2>Expériences professionnelles</h2>
+                <p class="description">Principalement des emplois à durées déterminées pendant la période saisonnière et des jobs étudiants en parallèle aux études.</p>
+                <div class="highlights">
+                    <div class="card">
+                        <header>
+                            <h3>DEVELOPPEUR FULL-STACK</h3>
+                            <time>Juin 2021 – Aout 2021</time>
+                        </header>
+                        <p>ACTIA Automotive – Développement d'une solution interne à l'entreprise. Du maquettage au developpement de la solution web Full-Stack (VueJS/NodeJS).</p>
+                        <img alt="logo-actia" src="assets/images/logo-actia.png"/>
+                    </div>
+
+                    <div class="card">
+                        <header>
+                            <h3>ANIMATRICE SCIENTIFIQUES</h3>
+                            <time>Février 2020 – Aout 2020</time>
+                        </header>
+                        <p>Espace Mendes France – Présentation et animation d’expositions mathématiques.</p>
+                        <img alt="logo-emf" src="assets/images/logo-emf.png"/>
+                    </div>
+                    <div class="card">
+                        <header>
+                            <h3>ANIMATION</h3>
+                            <time>Juillet 2019</time>
+                        </header>
+                        <p>Maison Pour Tous – Accueil de Loisirs. Animation de 3-5 ans et 6-9 ans.</p>
+                        <img alt="logo-mpt" src="assets/images/logo-mpt.jpg"/>
+                    </div>
+                    <div class="card">
+                        <header>
+                            <h3>COURS PARTICULIERS / AIDE AUX DEVOIRS</h3>
+                            <time>Octobre 2017 – Juillet 2019</time>
+                        </header>
+                        <p>Suivi d’élèves de cycle 3 et 4 (Collégiens). Ecoute et adaptation.</p>
+                        <img alt="logo-mpt" src="assets/images/logo-cours.png"/>
+                    </div>
+                    <div class="card">
+                        <header>
+                            <h3>PREPARATRICE COMMANDES DRIVE</h3>
+                            <time>Juillet 2018 – Aout 2018</time>
+                        </header>
+                        <p>Super U – Contrôle qualitatif et quantitatif des articles.</p>
+                        <img alt="logo-superU" src="assets/images/logo-superu.png"/>
+                    </div>
+                    <div class="card">
+                        <header>
+                            <h3>LOGISTIQUE</h3>
+                            <time>Juin 2017 – Juillet 2017</time>
+                        </header>
+                        <p>Coop Atlantique – Réception et préparation de commandes. Utilisation de tire-palette électrique.
+                            Conduite chariot autoporté CACES 1.</p>
+                        <img alt="logo-coop" src="assets/images/logo-coop.png"/>
+                    </div>
+                    <div class="card">
+                        <header>
+                            <h3>CHARGE DE CLIENTELE</h3>
+                            <time>Juillet 2016 – Août 2016</time>
+                        </header>
+                        <p>CCA International – Back office. Traitement informatique avec logiciels divers.</p>
+                        <img alt="logo-mpt" src="assets/images/logo-cca.jpg"/>
+                    </div>
+                </div>
+            </section>
+
+
+            <!--Atouts -->
+            <section class="wrapper">
+                <div class="highlights quality">
+                    <div class="card">
+                        <header>
+                            <a href="#" class="icon fa-line-chart"><span class="label">Icon</span></a>
+                            <h3>En veille active</h3>
+                        </header>
+                        <p>D’un esprit d’initiative aiguisé, je sais faire preuve de réactivité et
+                            j’ai une excellente capacité d’adaptation, par conséquent une grande résistance au stress et à la pression..</p>
+                    </div>
+                    <div class="card">
+                        <header>
+                            <a href="#" class="icon fa-paper-plane-o"><span class="label">Icon</span></a>
+                            <h3>Pro active</h3>
+                        </header>
+                        <p>Maîtrise des environnements de développement tel que IntelliJ, Eclipse, Mamp. Je travaille régulièrement en
+                            Java, Python, PHP, HTML/CSS/Javascript et particulièrement NodeJs, VueJS, et Angular.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <header>
+                            <a href="#" class="icon fa-book"><span class="label">Icon</span></a>
+                            <h3>Sans frontière</h3>
+                        </header>
+                        <p>J’accorde une importance particulière au changement de mon secteur d’activité. Un bon niveau en anglais,
+                            capacités relationnelles développées, aptitudes au travail en équipe.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Formations-->
+            <section class="wrapper">
+                <h2>Formations</h2>
+                <p class="description">Mes trois domaines de coeur sont : l'informatique (vous l'auriez deviné), les mathématiques et la santé.</p>
+                <div class="highlights">
+                    <div class="card">
+                        <header>
+                            <h3>Ingénieurie Logicielle</h3>
+                            <time>Septembre 2021 - Aout 2024</time>
+                        </header>
+                        <p>IMT Atlantique à Nantes.</p>
+                        <img alt="logo-iut" src="assets/images/logo-IMT.png"/>
+                    </div>
+                    <div class="card">
+                        <header>
+                            <h3>DUT Informatique</h3>
+                            <time>Septembre 2020 - Aout 2021</time>
+                        </header>
+                        <p>Université Paul Sabatier de Toulouse - Institut universitaire de technologie (IUT).</p>
+                        <img alt="logo-iut" src="assets/images/logo-iut.png"/>
+                    </div>
+                    <div class="card">
+                        <header>
+                            <h3>Master 1 MEEF : Mathématiques</h3>
+                            <time>Septembre 2019 - Juillet 2020</time>
+                        </header>
+                        <p>Université de Poitiers - Facultés de Sciences Fondamentales et Appliquées et INSPE.
+                        Métiers de l'enseignement, de l'éducation et de la formation</p>
+                        <img alt="logo-poitiers" src="assets/images/logo-poitiers.png"/>
+                    </div>
+                    <div class="card">
+                        <header>
+                            <h3>Licence mathématiques générales</h3>
+                            <time>Janvier 2017 - Juillet 2019</time>
+                        </header>
+                        <p>Université de Poitiers - Facultés de Sciences Fondamentales et Appliquées.</p>
+                        <img alt="logo-poitiers" src="assets/images/logo-poitiers.png"/>
+                    </div>
+                    <div class="card">
+                        <header>
+                            <h3>PACES</h3>
+                            <time>Septembre 2015 - Decembre 2016</time>
+                        </header>
+                        <p>Université de Poitiers - Facultés de Médecine et de Pharmacie. Non obtenu.</p>
+                        <img alt="logo-poitiers" src="assets/images/logo-poitiers.png"/>
+                    </div>
+                    <div class="card">
+                        <header>
+                            <h3>Lycée Marcelin Berthelot</h3>
+                            <time>Septembre 2012 - Juin 2015</time>
+                        </header>
+                        <p>Lycée de Châtellerault. Baccalaureat obtenu avec mention Bien : section européenne.</p>
                     </div>
                 </div>
             </section>
@@ -99,45 +209,6 @@
                     </div>
                     </header>
                     <canvas id="canvas"></canvas>
-                </div>
-            </section>
-
-        <!--Atouts -->
-            <section class="wrapper">
-                <div class="inner">
-                    <div class="highlights">
-                        <section>
-                            <div class="content">
-                                <header>
-                                    <a href="#" class="icon fa-line-chart"><span class="label">Icon</span></a>
-                                    <h3>En veille active</h3>
-                                </header>
-                                <p>D’un esprit d’initiative aiguisé, je sais faire preuve de réactivité et
-                                j’ai une excellente capacité d’adaptation, par conséquent une grande résistance au stress et à la pression..</p>
-                            </div>
-                        </section>
-                        <section>
-                            <div class="content">
-                                <header>
-                                    <a href="#" class="icon fa-paper-plane-o"><span class="label">Icon</span></a>
-                                    <h3>Pro active</h3>
-                                </header>
-                                <p>Maîtrise des environnements de développement tel que IntelliJ, Eclipse, Mamp. Je travaille régulièrement en
-                                    Java, Python, PHP, HTML/CSS/Javascript et particulièrement NodeJs, VueJS, et Angular.
-                                </p>
-                            </div>
-                        </section>
-                        <section>
-                            <div class="content">
-                                <header>
-                                    <a href="#" class="icon fa-book"><span class="label">Icon</span></a>
-                                    <h3>Sans frontière</h3>
-                                </header>
-                                <p>J’accorde une importance particulière au changement de mon secteur d’activité. Un bon niveau en anglais,
-                                    capacités relationnelles développées, aptitudes au travail en équipe.</p>
-                            </div>
-                        </section>
-                    </div>
                 </div>
             </section>
 
@@ -161,47 +232,39 @@
 
         <!-- Citation -->
             <section class="wrapper">
-                <div class="inner">
-                    <div class="testimonials">
-                        <section>
-                            <div class="content">
-                                <blockquote>
-                                    <p>Un programme informatique fait ce que vous lui avez dit de faire, pas ce que vous voulez qu'il fasse.</p>
-                                </blockquote>
-                                <div class="author">
-                                    <div class="image">
-                                        <img src="assets/images/pic01.jpg" alt="" />
-                                    </div>
-                                    <p class="credit">- <strong>Edward A. Murphy Jr.</strong></p>
-                                </div>
+                <div class="testimonials">
+                    <div class="card">
+                        <blockquote>
+                            <p>Un programme informatique fait ce que vous lui avez dit de faire, pas ce que vous voulez qu'il fasse.</p>
+                        </blockquote>
+                        <div class="author">
+                            <div class="image">
+                                <img src="assets/images/pic01.jpg" alt="" />
                             </div>
-                        </section>
-                        <section>
-                            <div class="content">
-                                <blockquote>
-                                    <p>La marche est le meilleur remède pour l'homme.</p>
-                                </blockquote>
-                                <div class="author">
-                                    <div class="image">
-                                        <img src="assets/images/pic02.jpg" alt="" />
-                                    </div>
-                                    <p class="credit">- <strong>Hippocrate</strong> </p>
-                                </div>
+                            <p class="credit">- <strong>Edward A. Murphy Jr.</strong></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <blockquote>
+                            <p>La marche est le meilleur remède pour l'homme.</p>
+                        </blockquote>
+                        <div class="author">
+                            <div class="image">
+                                <img src="assets/images/pic02.jpg" alt="" />
                             </div>
-                        </section>
-                        <section>
-                            <div class="content">
-                                <blockquote>
-                                    <p>La mathématique universelle... est une logique de l'imagination.</p>
-                                </blockquote>
-                                <div class="author">
-                                    <div class="image">
-                                        <img src="assets/images/pic03.jpg" alt="" />
-                                    </div>
-                                    <p class="credit">- <strong>Gottfried Wilhelm Leibniz</strong> </p>
-                                </div>
+                            <p class="credit">- <strong>Hippocrate</strong> </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <blockquote>
+                            <p>La mathématique universelle... est une logique de l'imagination.</p>
+                        </blockquote>
+                        <div class="author">
+                            <div class="image">
+                                <img src="assets/images/pic03.jpg" alt="" />
                             </div>
-                        </section>
+                            <p class="credit">- <strong>Gottfried Wilhelm Leibniz</strong> </p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -211,35 +274,35 @@
             <footer id="footer">
                 <div class="content">
                     <div class="aboutMe">
-                    <h4>En savoir plus</h4>
-                    <p>Ce site WEB professionnelle a été fait en dehors du cadre educatif. Le site est en constante évolution dès la maîtrise de
-                        nouvelles technologies. Bien qu'il ne soit pas représentatif de mes compétences, il représente un aperçu de ma motivation.
-                    </p>
+                        <h4>En savoir plus</h4>
+                        <p>Ce site WEB professionnelle a été fait en dehors du cadre educatif. Le site est en constante évolution dès la maîtrise de
+                            nouvelles technologies. Bien qu'il ne soit pas représentatif de mes compétences, il représente un aperçu de ma motivation.
+                        </p>
                     </div>
                     <div class="contactMe">
-                    <h4>Contact</h4>
-                    <ul class="plain">
-                        <li><a href="mailto:parvizmariam@gmail.com"><i class="fa fa-envelope">&nbsp;</i>Mail</a></li>
-                        <li><a href="https://www.linkedin.com/in/mariam-parviz-b86660201" target="_blank"><i class="fa fa-linkedin">&nbsp;</i>Linkedin</a></li>
-                        <li><a href="https://github.com/mpvz7" target="_blank"><i class="fa fa-github">&nbsp;</i>Github</a></li>
-                    </ul>
+                        <h4>Contact</h4>
+                        <ul id="socials">
+                            <li><a href="mailto:parvizmariam@gmail.com"><i class="fa fa-envelope">&nbsp;</i></a></li>
+                            <li><a href="https://www.linkedin.com/in/mariam-parviz-b86660201" target="_blank"><i class="fa fa-linkedin">&nbsp;</i></a></li>
+                            <li><a href="https://github.com/mpvz7" target="_blank"><i class="fa fa-github">&nbsp;</i></a></li>
+                        </ul>
                     </div>
                     <div class="footerForm">
-                    <h4>Form</h4>
-                    <form>
-                        <div class="formText">
-                            <input id="contactNameInpt" type="text">
-                            <input id="contactMailInpt" type="text">
-                            <input id="contactProjectInpt" type="text">
-                            Hello ! Je suis
-                            <div class="cFormInput" id="contactNameEdit" data-target="contactNameInpt" contenteditable="true">votre nom</div>
-                            , mon adresse mail est
-                            <div class="cFormInput" id="contactMailEdit" data-target="contactMailInpt" contenteditable="true">votre mail</div>
-                            et j'aimerais discuter
-                            <div class="cFormInput" id="contactProjectEdit" data-target="contactProjectInpt" contenteditable="true">à propos de</div>.
-                        </div>
-                        <button class="gradButton" type="submit" disabled>Envoyer</button>
-                    </form>
+                        <h4>Form</h4>
+                        <form>
+                            <div class="formText">
+                                <input id="contactNameInpt" type="text">
+                                <input id="contactMailInpt" type="text">
+                                <input id="contactProjectInpt" type="text">
+                                Hello ! Je suis
+                                <div class="cFormInput" id="contactNameEdit" data-target="contactNameInpt" contenteditable="true">votre nom</div>
+                                , mon adresse mail est
+                                <div class="cFormInput" id="contactMailEdit" data-target="contactMailInpt" contenteditable="true">votre mail</div>
+                                et j'aimerais discuter
+                                <div class="cFormInput" id="contactProjectEdit" data-target="contactProjectInpt" contenteditable="true">à propos de</div>.
+                            </div>
+                            <button class="gradButton" type="submit" disabled>Envoyer</button>
+                        </form>
                     </div>
                 </div>
                 <div class="copyright">
@@ -253,5 +316,15 @@
     <script type="text/javascript">
         var s = skrollr.init();
         const setTheme = theme => document.documentElement.className = theme;
+        if(screen.width > 980){
+            document.getElementById('arrow').innerHTML = "<p>Slider</p>\n" +
+                "                    <span class=\"icon fa-arrow-down\"></span>";
+        }
+        if(screen.width > 680){
+            document.getElementById('socials').innerHTML = '<li><a href="mailto:parvizmariam@gmail.com"><i class="fa fa-envelope">&nbsp;</i>Mail</a></li>\n' +
+                '                            <li><a href="https://www.linkedin.com/in/mariam-parviz-b86660201" target="_blank"><i class="fa fa-linkedin">&nbsp;</i>Linkedin</a></li>\n' +
+                '                            <li><a href="https://github.com/mpvz7" target="_blank"><i class="fa fa-github">&nbsp;</i>Github</a></li>'
+            document.getElementById('socials').style.color = "#000000";
+        }
     </script>
 </html>

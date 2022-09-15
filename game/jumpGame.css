@@ -1,6 +1,8 @@
 .score-container{
 	display: flex;
 	justify-content: space-around;
-	background-color: rgba(236,226,198,0.5);
+	align-items: center;
+	background-color: #D7E1EC;
 	font-weight: bold;
+	margin: 0 3rem;
 }

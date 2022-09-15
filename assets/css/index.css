@@ -1,52 +1,169 @@
-/* Variables */
+@import url(font-awesome.min.css);
+
+/* -- VARIABLES -- */
 :root {
-    --main-pink-color: #ffa69e;
-    --main-purple-color: #5d4954;
-    --main-grey-color: #434343;
-}
-:root,
-:root.light {
-    --bg-color: white;
-    --text-color: --main-grey-color;
+    --main-grey-color: #D7E1EC;
+    --main-blue-color: #04619F;
 }
 
+:root,
 :root.dark {
-    --bg-color: black;
+    --bg-primary-color: black;
+    --bg-secondary-color: #2C3E50;
     --text-color: white;
 }
 
-.theme-btn {
-    width: 3em;
-    height: 3em;
-    padding: 0.5em;
-    border-radius: 50%;
-    cursor: pointer;
-    border: none;
-    background-color: transparent;
+:root.light {
+    --bg-primary-color: white;
+    --bg-secondary-color: #D7E1EC;
+    --text-color: black;
 }
 
-.theme-btn img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-body{
-    width: 100vw;
-}
-
-/* appearance fixes */
 /* coloration */
 .holster .container > section:nth-child(odd) {
-    background: linear-gradient(315deg, var(--main-pink-color) 0%, var(--main-purple-color) 74%);
+    background: linear-gradient(315deg, var(--bg-secondary-color) 0%, var(--bg-primary-color) 74%);
 }
 
 .holster .container > section:nth-child(even) {
-    background: var(--bg-color);
+    background: var(--bg-primary-color);
 }
 .holster .container > section:first-child {
-    background-color: var(--main-purple-color);
+    background: linear-gradient(315deg, white 0%, var(--main-grey-color) 74%);
 }
 
+.holster {
+    flex-flow: column nowrap;
+}
+.holster .container {
+    display: flex;
+    flex-flow: column nowrap;
+    overflow: auto;
+    height: 97vh;
+    object-fit: cover;
+    right: 0;
+    bottom: 0;
+    /* scroll-snap */
+    scroll-snap-type: y mandatory;
+}
+
+.holster .container > * {
+    text-align: center;
+    scroll-snap-align: center;
+    flex: none;
+    height: 97vh;
+    overflow:auto;
+}
+
+html, body, div, span, applet, object,
+iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+pre, a, abbr, acronym, address, big, cite,
+code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b,
+u, i, dl, dt, dd, ol, ul, li, fieldset,
+form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside,
+canvas, details, embed, figure, figcaption,
+footer, header, hgroup, nav, output,
+section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+    cursor: url('../images/cursor.png'), auto; !important;
+}
+
+body{
+    background-color: var(--bg-primary-color);
+    color: var(--text-color);
+    font-size: 1.2rem;
+}
+
+h1{
+    font-size: 3rem;
+}
+
+h2{
+    font-size: 2rem;
+    padding: 1rem 0;
+    color: var(--main-blue-color)
+}
+
+.wrapper .inner{
+
+}
+
+/* -- HEADER -- */
+#header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    background-color: var(--bg-color);
+}
+#header a {
+    text-decoration: none;
+    color: var(--text-color);
+    padding-right: 0.5rem;
+}
+#header .links {
+    opacity: 0.8;
+}
+
+
+/* -- BANNER -- */
+#banner {
+    justify-content: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    color: #000000;}
+
+#banner .inner {
+    position: inherit;
+    top: 30vh;
+}
+#banner .inner p{
+    font-size: 1.2rem;
+    padding-top: 1rem;
+    font-style: italic;
+}
+#banner .inner span{
+    font-weight: bold;
+    color: var(--main-blue-color);
+}
+#banner video {
+    height: 97vh;
+    width: 100vw;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+    position: fixed;
+    position: absolute;
+    z-index: 1;
+    object-fit: cover;
+    opacity: 50%;
+}
+
+
+/* -- ARROW -- */
+#arrow{
+    position: inherit;
+    position: absolute;
+    bottom: 10%;
+    right: 50%;
+    font-size: 1.2rem;
+}
+#arrow p {
+    margin: 0;
+}
+
+/* -- JUMPING GAME -- */
 .jumpingGame{
     width: 100%;
 }
@@ -56,64 +173,283 @@ body{
     height: auto;
 }
 
+#canvas{
+    width: 50%;
+}
 
-@media screen and (min-width: 980px) {
-    .holster {
-        flex-flow: column nowrap;
-    }
-    .holster .container {
+
+/* -- DARK MODE -- */
+.theme-btn {
+    width: 2.5em;
+    height: 2.5em;
+    padding: 0.5em;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+.theme-btn p {
+    margin: 0;
+    font-size: 1.5em;
+    object-fit: cover;
+}
+
+.theme-btn.light{
+    display: none;
+}
+
+.fa-cloud {
+    color: navajowhite;
+    background-color: lightskyblue;
+}
+.fa-moon-o {
+    color: yellow;
+    background-color: darkblue;
+}
+.dark .theme-btn.dark {
+    display: none;
+}
+.dark .theme-btn.light {
+    display: block;
+}
+
+
+/* -- WRAPPER -- */
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    overflow: auto;
+}
+
+.wrapper h2, .description {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.wrapper .description{
+    font-style: italic;
+}
+
+/* -- HIGHLIGHTS -- */
+.highlights, .testimonials{
+    display: flex;
+}
+.quality, .testimonials{
+    justify-content: space-around;
+}
+.highlights .card{
+    border-top: 3px solid var(--main-grey-color);
+}
+.testimonials .card{
+    border-left: 3px solid var(--main-grey-color);
+}
+
+/* -- CARD -- */
+
+.card p {
+    color: grey;
+    width: 15em;
+    padding: 3rem 0;
+}
+
+.card {
+    border-radius: 5px;
+    box-shadow: 0 1rem 1.2rem -1rem var(--main-grey-color);
+    padding: 2rem;
+    margin: 2rem;
+    position: relative;
+}
+
+.card img {
+    height: 5rem;
+    border-radius: 5%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 1rem;
+    opacity: 0.75
+}
+
+.card .icon{
+    font-size: 2rem;
+    padding-bottom: 1rem;
+    color: var(--main-blue-color)
+}
+
+/* -- GALLERY -- */
+.gallery img{
+    width: 15em;
+}
+.gallery{
+    display: flex;
+    color: var(--main-blue-color)
+}
+.gallery li a {
+    float: left;
+    font-family: Apple Chancery;
+    font-size: 1.2em;
+    text-decoration: none;
+    padding: 1em 1em 2em 1em;
+    background: #eee;
+    border: 1px solid #fff;
+    -moz-box-shadow: 0 1em 2em #333;
+}
+.gallery li a.pic-1, a.pic-6,a.pic-7 {
+    z-index: 1;
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+}
+.gallery li a.pic-2, a.pic-4, a.pic-8, a.pic-10   {
+    z-index: 5;
+    -webkit-transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+}
+.gallery li a.pic-3, a.pic-5, a.pic-9   {
+    z-index: 3;
+    -webkit-transform: rotate(4deg);
+    -moz-transform: rotate(4deg);
+}
+.gallery li a:hover {
+    z-index: 100;
+    -moz-box-shadow: 1em 1.5em 2em #333;
+}
+
+/* -- FOOTER -- */
+
+#footer h4 {
+    font-size: 1.4em;
+    padding: 1em 0;
+}
+#footer a{
+    text-decoration: none;
+    color: white;
+}
+#footer i{
+    font-size: 1.5em;
+    padding-right: 1em;
+    color: var(--main-blue-color)
+;
+}
+
+#footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#footer li{
+    padding-bottom: 1em;
+}
+
+#footer li a{
+    color: var(--text-color);
+}
+
+@media screen and (min-width: 680px) {
+    #footer .content{
         display: flex;
-        flex-flow: column nowrap;
-        overflow: auto;
-        height: 93vh;
-        object-fit: cover;
-        right: 0;
-        bottom: 0;
-        /* scroll-snap */
-        scroll-snap-type: y mandatory;
+        flex-direction: row;
+        text-align: justify;
+        justify-content: space-around;
     }
 
-    .holster .container > * {
-        text-align: center;
-        scroll-snap-align: center;
-        flex: none;
-        height: 100vh;
-        overflow:auto;
+    .aboutMe, .footerForm{
+        padding: 10% 0;
+        width: 30%;
     }
-
-    #canvas{
-        width: 50%;
-    }
-
-    /* -- ARROW 6      -- */
-
-    .arrow-6 {
-        /* more triangle */
-        height: 10px; width: 10px;
-        border: 1px solid rgba(255, 255, 255, 0.6);
-        border-width: 3px 3px 0 0;
-        transform: rotate(45deg);
-    }
-
-    .arrow-6:before, .arrow-6:after {
-        content: '';
-        position: absolute;
-        display: block;
-        height: 10px; width: 10px;
-        border-width: 3px 3px 0 0;
-    }
-
-    .arrow-6:before {
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        border-width: 3px 3px 0 0;
-        /* top - distance minus border */
-        top: 7px; left: -10px;
-    }
-
-    .arrow-6:after {
-        border: 1px solid rgba(255, 255, 255, 1);
-        border-width: 3px 3px 0 0;
-        /* top - distance plus border */
-        top: -13px; left: 10px;
+    .contactMe{
+        padding-top: 10%;
+        width: 20%;
     }
 }
+@media screen and (max-width: 680px) {
+    #footer .content{
+        flex-direction: column;
+    }
+    #footer p{
+        padding: 2rem;
+    }
+    .footerForm button{
+        margin-left: 40%;
+        margin-bottom: 10%;
+    }
+    #socials{
+        display: flex;
+        justify-content: center;
+    }
+    .footerForm{
+        margin: 0 2rem;
+    }
+}
+
+
+.cFormInput {
+    outline: 0;
+    color: var(--main-blue-color);
+    padding: 0 1em;
+    background: transparent;
+    transition: border-color 0.2s;
+    overflow-wrap: break-word;
+    height: 1rem;
+}
+
+.cFormInput:focus{
+    content: none;
+}
+
+.footerForm input {
+    visibility: hidden;
+    position: absolute;
+    overflow-wrap: break-word;
+    bottom: 0;
+}
+.formText{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: last baseline;
+    overflow-wrap: break-word;
+}
+
+.footerForm button{
+    background: no-repeat center, linear-gradient(315deg, var(--main-grey-color) 0%, #5d4954 74%);
+    cursor: pointer;
+    outline: none;
+    display: block;
+    margin-top: 40px;
+    border-radius: 20px;
+    border: 0;
+    box-shadow: none;
+    width: 100px;
+    height: 35px;
+    font-size: 12px;
+    line-height: 35px;
+    text-align: center;
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+}
+#footer .copyright {
+    border-top: 1px solid;
+    font-size: 0.8rem;
+    opacity: 0.5;
+    padding: 2rem 0;
+    text-align: center; }
+
+
+/* -- ICON -- */
+.icon {
+    text-decoration: none;
+    border-bottom: none;
+    position: relative;}
+.icon:before {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-transform: none !important; }
+.icon > .label {
+    display: none; }
