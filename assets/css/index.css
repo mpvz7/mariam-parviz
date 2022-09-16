@@ -83,6 +83,7 @@ h1{
 }
 
 h2{
+    font-size: 2rem;
     padding: 1rem 0;
     color: var(--main-blue-color)
 }
@@ -175,6 +176,7 @@ html {
     text-align: center;
     background-color: var(--main-blue-color);
     color: white;
+    z-index: 101;
 }
 
 
@@ -314,6 +316,7 @@ html {
     font-family: Apple Chancery;
     font-size: 1.2em;
     text-decoration: none;
+    color: var(--main-blue-color);
     padding: 1em 1em 1.5em 1em;
     background: #eee;
     border: 1px solid #fff;
