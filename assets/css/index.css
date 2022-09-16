@@ -76,7 +76,6 @@ section, summary, time, mark, audio, video {
 body{
     background-color: var(--bg-primary-color);
     color: var(--text-color);
-    font-size: 1.2rem;
 }
 
 h1{
@@ -84,14 +83,16 @@ h1{
 }
 
 h2{
-    font-size: 2rem;
     padding: 1rem 0;
     color: var(--main-blue-color)
 }
 
-.wrapper .inner{
-
-}
+/* -- TYPOGRAPHY -- */
+html {
+    font-size: 13pt; }
+@media screen and (max-width: 980px) {
+    html {
+        font-size: 11pt; } }
 
 /* -- HEADER -- */
 #header{
@@ -127,7 +128,6 @@ h2{
     top: 30vh;
 }
 #banner .inner p{
-    font-size: 1.2rem;
     padding-top: 1rem;
     font-style: italic;
 }
@@ -157,11 +157,26 @@ h2{
     position: absolute;
     bottom: 10%;
     right: 50%;
-    font-size: 1.2rem;
 }
 #arrow p {
     margin: 0;
 }
+
+/* -- DOWNLOAD CV -- */
+.fa-download{
+    position: inherit;
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    padding: 0.5rem;
+    text-align: center;
+    background-color: var(--main-blue-color);
+    color: white;
+}
+
 
 /* -- JUMPING GAME -- */
 .jumpingGame{
@@ -173,8 +188,10 @@ h2{
     height: auto;
 }
 
-#canvas{
-    width: 50%;
+@media screen and (min-width: 980px) {
+    #canvas {
+        width: 50%;
+    }
 }
 
 
@@ -201,10 +218,12 @@ h2{
 .fa-cloud {
     color: navajowhite;
     background-color: lightskyblue;
+    border-radius: 10%;
 }
 .fa-moon-o {
     color: yellow;
     background-color: darkblue;
+    border-radius: 10%;
 }
 .dark .theme-btn.dark {
     display: none;
@@ -218,7 +237,7 @@ h2{
 .wrapper{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     overflow: auto;
 }
 
@@ -238,8 +257,10 @@ h2{
 .highlights, .testimonials{
     display: flex;
 }
-.quality, .testimonials{
-    justify-content: space-around;
+@media screen and (min-width: 980px) {
+    .quality, .testimonials {
+        justify-content: space-around;
+    }
 }
 .highlights .card{
     border-top: 3px solid var(--main-grey-color);
@@ -250,18 +271,18 @@ h2{
 
 /* -- CARD -- */
 
+.card {
+    border-radius: 5px;
+    box-shadow: 0 1rem 1.2rem -1rem var(--main-grey-color);
+    padding: 1.5rem;
+    margin: 1.5rem;
+    position: relative;
+}
+
 .card p {
     color: grey;
     width: 15em;
     padding: 3rem 0;
-}
-
-.card {
-    border-radius: 5px;
-    box-shadow: 0 1rem 1.2rem -1rem var(--main-grey-color);
-    padding: 2rem;
-    margin: 2rem;
-    position: relative;
 }
 
 .card img {
@@ -277,23 +298,23 @@ h2{
 .card .icon{
     font-size: 2rem;
     padding-bottom: 1rem;
-    color: var(--main-blue-color)
+    color: var(--main-blue-color);
 }
 
 /* -- GALLERY -- */
-.gallery img{
-    width: 15em;
-}
 .gallery{
     display: flex;
-    color: var(--main-blue-color)
+    color: var(--main-blue-color);
+}
+.gallery img{
+    width: 12em;
 }
 .gallery li a {
     float: left;
     font-family: Apple Chancery;
     font-size: 1.2em;
     text-decoration: none;
-    padding: 1em 1em 2em 1em;
+    padding: 1em 1em 1.5em 1em;
     background: #eee;
     border: 1px solid #fff;
     -moz-box-shadow: 0 1em 2em #333;
@@ -442,8 +463,7 @@ h2{
 /* -- ICON -- */
 .icon {
     text-decoration: none;
-    border-bottom: none;
-    position: relative;}
+    border-bottom: none;}
 .icon:before {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
