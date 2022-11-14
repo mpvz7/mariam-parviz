@@ -30,7 +30,7 @@
         </header>
         <div class="container">
 
-            <!-- Bannière -->
+            <!-- Ancienne bannière 
             <section id="banner">
                 <div class="inner">
                     <h1>Portefolio</h1>
@@ -41,6 +41,16 @@
                 <video autoplay loop muted playsinline src="assets/images/banner.mp4"></video>
                 <div id="arrow">
                 </div>
+            </section> -->
+
+            <!-- Bannière -->
+            <section id="banner">
+                <figure class="image">
+                    <img src="https://images.unsplash.com/photo-1546146830-2cca9512c68e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="W3docs" />
+                    <figcaption>
+                      <h3>Mariam PARVIZ</h3>
+                    </figcaption>
+                  </figure>
             </section>
 
             <!-- Experiences professionnelles -->
@@ -113,12 +123,13 @@
                         <img alt="logo-mpt" src="assets/images/logo-cca.jpg"/>
                     </div>
                 </div>
-                <a class="icon fa-download" href="assets/documents/CV-Mariam-Parviz.pdf" download="CV-Mariam-Parviz"><br>CV</a>
+                <a class="icon fa-download" href="assets/documents/CV-Mariam-Parviz.pdf" download="CV-Mariam-Parviz" cla><br>CV</a>
             </section>
 
 
             <!--Atouts -->
             <section class="wrapper">
+                <h2>Qualités</h2>
                 <div class="highlights quality">
                     <div class="card">
                         <header>
@@ -204,11 +215,11 @@
                 </div>
             </section>
 
-        <!-- Jeu pingouin -->
+        <!-- Jumping game -->
             <section class="wrapper">
                 <div class="inner jumpingGame">
                     <header class="special">
-                    <h2>Pingouin</h2>
+                    <h2>Jump</h2>
                     <div class="score-container">
                         <div id="bestScore"></div>
                         <div id="currentScore"></div>
@@ -220,6 +231,7 @@
 
         <!-- Gallery -->
             <section id="cta" class="wrapper">
+                <h2>Loisirs</h2>
                 <div class="inner">
                     <ul class="gallery">
                         <li><a href="#" class="pic-1"><img src="assets/images/mykonos.jpg" alt="Mykonos" />Mykonos</a></li>
@@ -238,6 +250,7 @@
 
         <!-- Citation -->
             <section class="wrapper">
+                <h2>Citations</h2>
                 <div class="testimonials">
                     <div class="card">
                         <blockquote>
@@ -322,10 +335,6 @@
     <script type="text/javascript">
         var s = skrollr.init();
         const setTheme = theme => document.documentElement.className = theme;
-        if(screen.width > 980){
-            document.getElementById('arrow').innerHTML = "<p>Slider</p>\n" +
-                "                    <span class=\"icon fa-arrow-down\"></span>";
-        }
         if(screen.width > 680){
             document.getElementById('socials').innerHTML = '<li><a href="mailto:parvizmariam@gmail.com"><i class="fa fa-envelope">&nbsp;</i>Mail</a></li>\n' +
                 '                            <li><a href="https://www.linkedin.com/in/mariam-parviz-b86660201" target="_blank"><i class="fa fa-linkedin">&nbsp;</i>Linkedin</a></li>\n' +
